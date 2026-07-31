@@ -10,6 +10,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- ====== CENTERING FIX (NEW CSS ADDED) ====== -->
+  <style>
+    /* About section container ko center karein */
+    .about-container {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      max-width: 900px !important;
+      margin: 0 auto !important;
+    }
+
+    /* Image aur Content ko beech mein lane ke liye */
+    .about-image-wrapper, .about-content {
+      width: 100% !important;
+      max-width: 700px !important;
+      margin: 0 auto !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Image ka size thoda adjust karein taake center mein acha dikhe */
+    .about-image-wrapper img {
+      width: 100% !important;
+      max-width: 600px !important;
+      height: auto !important;
+      object-fit: cover !important;
+      border-radius: 20px;
+    }
+
+    /* '5+ Years' badge ko center karein */
+    .about-experience-badge {
+      position: absolute !important;
+      bottom: 20px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      background: white;
+      padding: 15px 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    /* List items ko bhi center align karein */
+    .about-list {
+      display: inline-block !important;
+      text-align: left !important;
+      margin: 20px auto !important;
+    }
+
+    .about-list li {
+      text-align: left !important;
+    }
+
+    /* Tablet/Desktop par thoda space dein */
+    @media (min-width: 768px) {
+      .about-container {
+        padding: 40px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -203,16 +267,15 @@
     </div>
   </section>
 
-  <!-- ====== ABOUT ====== -->
+  <!-- ====== ABOUT (Now Centered!) ====== -->
   <section class="about" id="about">
     <div class="about-container">
       <div class="about-image">
         <div class="about-image-wrapper">
-           <!-- UPDATED: High Quality Stylish Shoes Collage Image -->
            <img src="https://images.unsplash.com/photo-1562183241-b937e95585b6?w=800&auto=format&fit=crop" alt="Style Meets Comfort">
            
-           <!-- UPDATED: Badge ko thoda neeche shift kar diya gaya hai -->
-           <div class="about-experience-badge" style="bottom: 40px;">
+           <!-- Badge is now perfectly centered -->
+           <div class="about-experience-badge">
             <span class="exp-number">5+</span>
             <span class="exp-label">Years of Fashion</span>
           </div>
